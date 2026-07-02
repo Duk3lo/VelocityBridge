@@ -1,7 +1,6 @@
 package org.astral.velocitybridge;
 
 import org.astral.velocitybridge.signed.PlayerChatListener;
-import org.astral.velocitybridge.signed.PlayerCommandListener;
 import org.astral.velocitybridge.signed.PlayerQuitListener;
 import org.astral.velocitybridge.signed.SignedMessageListener;
 import org.astral.velocitybridge.signed.queue.SignedQueue;
@@ -20,7 +19,6 @@ public final class VelocityBridge extends JavaPlugin {
         this.commandQueue = new SignedQueue();
         getServer().getMessenger().registerIncomingPluginChannel(this, SIGNED_CHANNEL, new SignedMessageListener(this));
         getServer().getPluginManager().registerEvents(new PlayerChatListener(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerCommandListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerQuitListener(this), this);
 
         getLogger().info("VelocityBridge habilitado (Soporte exclusivo para SignedVelocity).");
