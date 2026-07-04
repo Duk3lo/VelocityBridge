@@ -38,7 +38,6 @@ public class PlayerChatListener implements Listener {
                 }).join();
     }
 
-    // Adaptado para Spigot/Arclight sin depender de Paper/NMS
     private boolean isLocal() {
         for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
             String methodName = element.getMethodName();

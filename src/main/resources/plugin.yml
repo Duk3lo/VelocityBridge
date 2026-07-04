@@ -1,5 +1,5 @@
 name: SignedVelocityBridge
 version: 1.0
 main: org.astral.velocitybridge.VelocityBridge
-api-version: '1.21'
+api-version: '1.20'
 folia-supported: true
